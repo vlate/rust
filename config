@@ -1,0 +1,5 @@
+[source.rustcc]
+registry = "https://code.aliyun.com/rustcc/crates.io-index.git"
+# 指定镜像
+replace-with = 'rustcc' 
+# 如：tuna、sjtu、ustc，或者 rustcc
