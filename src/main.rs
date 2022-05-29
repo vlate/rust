@@ -21,9 +21,10 @@ fn main() {
         io::stdin()
             // 从io库中调用stdin函数；如果开头没有使用use std::io引入io库，则可以写成std::io::stdin来使用
             .read_line(&mut guess)
-            // 调用read_line获取用户输入；&表述应用相关变量
+            // 调用read_line获取用户输入；&表述应用相关变量；read_line返回枚举值ok或err
             .expect("Failed to read line");
-        //不太清楚定义的值为何用
+            // 当返回值为err时程序崩溃，并返回信息"Failed to read line"
+        //
         let guess: u32 = match guess.trim().parse() 
         // .expect("Please type a number!")
         // parse返回resule类型,并传给expect
