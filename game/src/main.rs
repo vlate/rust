@@ -42,7 +42,7 @@ fn main() {
         println!("You guessed: {}", guess);
         // {}为占位符
 
-        match guess.cmp(&secret_number) {
+        match guess.cmp(&secret_number)  {
             // 比较guess与secret numver，cmp返回一个ordering枚举成员
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
